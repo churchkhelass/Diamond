@@ -275,3 +275,153 @@ body {
 .add-select-button:hover {
     background-color: #3498db;
 }
+/* Стили для таблицы */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1em;
+    color: #333;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+.styled-table thead th {
+    background-color: #f7f9fc;
+    font-weight: 600;
+    color: #2c3e50;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.styled-table tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #e9f5fc;
+}
+
+.styled-table tbody tr td {
+    transition: background-color 0.3s ease;
+}
+
+.styled-table td:first-child,
+.styled-table th:first-child {
+    border-radius: 5px 0 0 5px;
+}
+
+.styled-table td:last-child,
+.styled-table th:last-child {
+    border-radius: 0 5px 5px 0;
+}
+/* Контейнер для формы с чекбоксами */
+.checkbox-form {
+    max-width: 400px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Ряд с чекбоксом */
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.styled-checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #2980b9;
+    border-radius: 4px;
+    background-color: #ffffff;
+    cursor: pointer;
+    position: relative;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* Галочка для чекбокса */
+.styled-checkbox:checked {
+    background-color: #2980b9;
+}
+
+.styled-checkbox:checked::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 0px;
+    width: 6px;
+    height: 12px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Стили для текста рядом с чекбоксом */
+.checkbox-row label {
+    font-size: 1.1em;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Кнопка Сохранить */
+.save-button {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    color: #ffffff;
+    background-color: #2980b9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+    background-color: #3498db;
+}
+
+/* Стилизованный select */
+.styled-select {
+    margin-bottom: 20px;
+    max-width: 400px;
+}
+
+.styled-select label {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.styled-select select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    color: #333;
+    background-color: #f9fafb;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.styled-select select:focus {
+    border-color: #2980b9;
+    outline: none;
+}
