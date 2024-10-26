@@ -40,6 +40,9 @@ body {
 .sidebar li a:hover {
     background-color: #34495e;
 }
+.sidebar li a.active {
+    background-color: #3d638a;
+}
 
 .sidebar a {
     color: #ecf0f1;
@@ -138,4 +141,66 @@ body {
     display: block;
     width: 100%;
     height: 100%;
+}
+
+/* Общий контейнер для формы */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Стили для полей формы */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus {
+    border-color: #2980b9;
+    box-shadow: 0 0 5px rgba(41, 128, 185, 0.3);
+    outline: none;
+}
+
+/* Кнопка "Сохранить" */
+.save-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2980b9;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.save-button:hover {
+    background-color: #3498db;
+    transform: translateY(-2px);
+}
+
+.save-button:active {
+    transform: translateY(0);
 }
