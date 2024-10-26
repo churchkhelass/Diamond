@@ -1,16 +1,5 @@
 const request = require('request-promise');
 
-module.exports.Log = async function (){
-    let url = `http://localhost:${process.env.API_PORT}/log`;
-    let res_ = await get_data(url, 'GET', {});
-    if(!res_.success) {
-        console.log('Log was Started with Error');
-        process.exit(1);
-    }
-
-    return res_.success;
-}
-
 module.exports.Init = async function (){
     let url = `http://localhost:${process.env.API_PORT}/init`;
     let res_ = await get_data(url, 'GET', {});
