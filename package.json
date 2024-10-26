@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1"
+  },
+  "name": "diamond",
+  "description": "123",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/churchkhelass/Diamond.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/churchkhelass/Diamond/issues"
+  },
+  "homepage": "https://github.com/churchkhelass/Diamond#readme"
+}
