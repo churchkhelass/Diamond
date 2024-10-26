@@ -1,0 +1,1 @@
+INSERT INTO db_diamond.tbl_datasources (ts, name, query, user_id) 

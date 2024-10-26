@@ -23,17 +23,21 @@
     </svg></button>
     <div class="sidebar" id="sidebar">
         <ul>
-            <li><a href="/">Reports</a></li>
-            <li><a href="#">One Page</a></li>
-            <li><a href="#">Report</a></li>
-            <li><a href="/datasource">Datasource</a></li>
-            <li><a href="#">Charts</a></li>
+            <li><a name="a-reports" href="/">Reports</a></li>
+            <li><a name="a-onepage" href="/builder/onepage">One Page</a></li>
+            <li><a name="a-report" href="/builder/report">Report</a></li>
+            <li><a name="a-datasource" href="/datasource">Datasource</a></li>
+            <li><a name="a-charts" href="#">Charts</a></li>
         </ul>
     </div>
     <div class="main-content" id="main-content">
 {page_inner}
     </div>
 </div>
+<script src="js/lib/jquery-3.6.4.min.js"></script>
+<script src="js/lib/jquery-ui.min.js"></script>
+<script src="https://cdn.datatables.net/v/dt/dt-1.13.4/fh-3.3.2/datatables.min.js"></script>
+
 <script src="js/main.js"></script>
 <script src="js/{specific_name}.js"></script>
 </body>

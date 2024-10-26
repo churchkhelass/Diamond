@@ -24,24 +24,23 @@ const clickhouse_market = new ClickHouse({
     }
 });
 
-module.exports.GetLiqAssetsTmp = async function (account, ts){
-    var query = queries('get_liq_assets_tmp.sql');
-    query = query.replace(/{dev_mode}/g, DEV_MODE).replace(/{account}/g, account).replace(/{ts}/g, ts);
-    let liqs = null;
+module.exports.get_datasources = async function (ts_start, ts_end){
+    var query = queries('get_datasources.sql');
+    let where = (ts_start && ts_end) ? `/nWHERE ts >= ${ts_start} AND ts < ${ts_end}`: '';
+    query = query.replace(/{where}/g, where);
+    let ret = [];
     try {
         let res = await clickhouse_market.query(query).toPromise();
-        if (res.length > 0) liqs = res;
+        if (res.length > 0) ret = res;
     } catch (error) {
         let e = fit_error(error);
-        console.log('GetLiqTmp : ', JSON.stringify(e));
+        console.log('get_datasources : ', JSON.stringify(e));
     }
-    return liqs;
+    return ret;
 }
 
 module.exports.SaveArray = async function (rows, fquery) {
     var query = queries(fquery);
-    query = query.replace(/{dev_mode}/g, DEV_MODE);
-
     return (await save_rows(query, rows));
 }
 

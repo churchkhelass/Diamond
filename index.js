@@ -16,6 +16,14 @@ app.use(cookieParser());
 app.use("/css", express.static(__dirname + '/www/css'));
 app.use("/img", express.static(__dirname + '/www/img'));
 app.use("/js", express.static(__dirname + '/www/js'));
+
+app.use("/builder/css", express.static(__dirname + '/www/css'));
+app.use("/builder/img", express.static(__dirname + '/www/img'));
+app.use("/builder/js", express.static(__dirname + '/www/js'));
+
+app.use("/viewer/css", express.static(__dirname + '/www/css'));
+app.use("/viewer/img", express.static(__dirname + '/www/img'));
+app.use("/viewer/js", express.static(__dirname + '/www/js'));
 app.use(routes);
  
 app.listen(process.env.PORT, function () { 

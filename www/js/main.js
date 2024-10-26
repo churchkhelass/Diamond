@@ -13,7 +13,8 @@ function switchTab(event, tabId) {
     tabButtons.forEach(button => button.classList.remove('active'));
 
     // Показать выбранную вкладку
-    document.getElementById(tabId).style.display = 'block';
+    let tab_el = document.getElementById(tabId)
+    if (tab_el) tab_el.style.display = 'block';
     if (event) event.currentTarget.classList.add('active');
 }
 
