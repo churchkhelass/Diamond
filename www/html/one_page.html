@@ -1,0 +1,26 @@
+<!-- Переключаемый таб -->
+<div class="tabs">
+    <button class="tab-button active" onclick="switchTab(event, 'tab1')">Создание</button>
+    <button class="tab-button" onclick="switchTab(event, 'tab2')">Результат</button>
+</div>
+
+<!-- Контент вкладок -->
+<div class="tab-content" id="tab1">
+    <!-- Блок с select элементами -->
+    <div class="select-container" id="select-container">
+        <label>
+            <select>
+                <option value="">Выберите поле</option>
+                <option value="1">Поле 1</option>
+                <option value="2">Поле 2</option>
+                <option value="3">Поле 3</option>
+            </select>
+        </label>
+    </div>
+    <button class="add-select-button" onclick="addSelect()">Добавить поле для отчета</button>
+</div>
+
+<div class="tab-content" id="tab2" style="display: none;">
+    <!-- Контент второй вкладки -->
+    <p>Содержимое вкладки 2</p>
+</div>
