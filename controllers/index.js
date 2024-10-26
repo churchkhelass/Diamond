@@ -7,3 +7,4 @@ module.exports.ico = function(req, res) {
 }
 
 module.exports.reports = require(`./reports`);
+module.exports.datasource = require(`./datasource`);
