@@ -69,6 +69,7 @@ body {
     background-color: #ffffff;
     transition: margin-left 0.3s ease;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: calc(100% - 250px);
 }
 
 /* Кнопка для открытия/закрытия панели */
@@ -275,17 +276,36 @@ body {
 .add-select-button:hover {
     background-color: #3498db;
 }
+/* Контейнер для горизонтальной прокрутки */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 /* Стили для таблицы */
 .styled-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 1em;
-    color: #333;
-    margin: 0 auto;
-    padding: 20px;
+    min-width: 600px; /* Устанавливаем минимальную ширину для прокрутки */
     background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+}
+
+/* Стиль для полосы прокрутки */
+.table-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: #f0f4f8;
+    border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background-color: #2980b9;
+    border-radius: 4px;
 }
 
 .styled-table th,
@@ -424,4 +444,63 @@ body {
 .styled-select:focus {
     border-color: #2980b9;
     outline: none;
+}
+
+/* Стили списка с опциями */
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.option {
+    font-size: 1.1em;
+    padding: 15px 20px 15px 45px;
+    margin-bottom: 10px;
+    background-color: #f9fafb;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.option::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #2980b9;
+    border-radius: 4px;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.option.selected::before {
+    background-color: #2980b9;
+}
+
+.option.selected::after {
+    content: '';
+    position: absolute;
+    left: 19px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 6px;
+    height: 12px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+}
+
+.option:hover {
+    background-color: #e9f5fc;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Стиль для полосы прокрутки */
+.table-container::-webkit-scrollbar {
+    height: 8px;
 }
