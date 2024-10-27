@@ -21,6 +21,8 @@ router.get('/report/get_datasources', controllers.report.get_datasources);
 router.post('/datasource/save', controllers.datasource.save);
 router.post('/report', controllers.report.save);
 
+router.post('/upload_csv', controllers.datasource.upload_csv);
+
 router.get('/viewer/get_report', controllers.report.get_report);
 
 

@@ -12,4 +12,22 @@
 
         <button id="save" class="save-button">Сохранить</button>
     </div>
+    <hr><hr>
+    <div id="uploadForm">
+        <input type="file" id="csvFileInput" accept=".csv" style="display: none;">
+        <div class="form-group">
+            <button id="openBtn" class="save-button">Choose CSV</button>
+        </div>
+        <div class="form-group">
+            <label for="upload_name"><b>Имя Файла: &nbsp;</b></label>
+            <label id="upload_name"></label>
+        </div>
+        <div class="form-group">
+            <label for="upload_tbl_name"><b>Имя Таблицы: &nbsp;</b></label>
+            <input type="text" id="upload_tbl_name" name="name" placeholder="Имя таблицы, напр. tbl_some_name">
+        </div>
+        <div class="form-group">
+            <button id="uploadBtn" class="save-button">Upload CSV</button>
+        </div>
+    </div>
 </div>

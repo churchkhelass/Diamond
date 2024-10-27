@@ -106,6 +106,31 @@ module.exports.get_columns = async function (name){
     return ret;
 }
 
+module.exports.CreateTableAndSave = async function (tbl_name, data) {
+    var query = queries(`create_table.sql`);
+    let keys = Object.keys(data[0]);
+    let formattedKeys = keys.map(key => `\`${key}\` String`);
+    let formattedKeys2 = keys.map(key => `\`${key}\``);
+    let columns = formattedKeys.join(',\n');
+    let columns2 = formattedKeys2.join(',');
+    query = query.replace(/{tbl_name}/g, tbl_name).replace(/{columns}/g, columns);
+    let res = null;
+    try {
+        let _res = (await clickhouse_market.query(query).toPromise());
+        if (_res) {
+            let valuesArray = data.map(item => keys.map(key => item[key]));
+            let insert_table_query = `INSERT INTO db_diamond.${tbl_name} (${columns2})`;
+            await save_rows(insert_table_query, valuesArray);
+            res = true;
+        }
+    } catch (error) {
+        let e = fit_error(error);
+        let msg = {fn: 'Create', tbl, error: JSON.stringify(e)};
+        console.log('ERR in db.Create:', JSON.stringify(msg));
+    }
+    return res;
+}
+
 module.exports.SaveArray = async function (rows, fquery) {
     var query = queries(fquery);
     return (await save_rows(query, rows));
