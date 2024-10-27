@@ -11,3 +11,13 @@ module.exports.page_load = async function(req,res,next) {
     }
 }
 
+module.exports.get_reports = async function(req,res,next) {
+    try {
+        let result = await DB_API.get_reports();
+        res.send(result);
+
+    } catch (error) {
+        console.log(error);
+        res.send({'result':'Something wrong'});
+    }
+}

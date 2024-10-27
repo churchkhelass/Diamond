@@ -4,6 +4,9 @@ $(document).ready( function () {
     let a = $('a[name="a-onepage"]');
     a.attr('href', '#');
     a.toggleClass('active');
+
+    switchTab(null, 'tab1'); // Активируем первую вкладку
+    document.querySelector('.tab-button').classList.add('active'); // Устанавливаем активный стиль на первую кнопку
 });
 
 // Функция для переключения вкладок

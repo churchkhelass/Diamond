@@ -244,7 +244,7 @@ body {
 }
 
 /* Стили для select */
-.select-container select {
+.select-container {
     width: 100%;
     padding: 10px;
     border-radius: 5px;
@@ -256,7 +256,7 @@ body {
     appearance: none;
 }
 
-.select-container select:hover {
+.select-container:hover {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -409,7 +409,7 @@ body {
     display: block;
 }
 
-.styled-select select {
+.styled-select {
     width: 100%;
     padding: 10px;
     font-size: 1em;
@@ -421,7 +421,7 @@ body {
     cursor: pointer;
 }
 
-.styled-select select:focus {
+.styled-select:focus {
     border-color: #2980b9;
     outline: none;
 }

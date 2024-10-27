@@ -1,17 +1,27 @@
 <div class="styled-select">
     <label for="datasource-select">Выберите Datasource:</label>
     <select id="datasource-select">
-
+        <option value="NONE">Not Selected</option>
     </select>
 </div>
 <div class="checkbox-form">
     <div class="checkbox-row">
-        <input type="checkbox" id="field1" class="styled-checkbox">
-        <label for="field1">Тестовое поле</label>
+        <label for="report_name">Имя репорта&nbsp;</label>
+        <input type="text" id="report_name">
     </div>
-    <button class="save-button">Сохранить</button>
+    <div class="checkbox-row">
+        <label for="report_desc">Описание&nbsp;</label>
+        <input type="text" id="report_desc">
+    </div>
+    <button class="save-button" id="btn-save">Сохранить</button>
 </div>
-<table class="styled-table">
-    <tr><td>1</td><td>2</td></tr>
-    <tr><td>3</td><td>4</td></tr>
+<table class="styled-table" id="tbl_datasource">
+    <thead>
+        <tr>
+            <th class="ta-left">Check</th>
+            <th class="ta-left">Name</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
 </table>

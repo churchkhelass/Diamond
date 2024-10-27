@@ -1,0 +1,1 @@
+INSERT INTO db_diamond.tbl_report_meta (ts, name, desc, datasource_name, fields, user_id) 
