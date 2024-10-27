@@ -37,10 +37,8 @@ module.exports.upload_csv = async function(req,res,next) {
 
         if (jsonArray.length > 0) {
             await DB_API.CreateTableAndSave(tbl_name, jsonArray);
-            let user_id = 0;
-            let r = await DB_API.SaveArray([[Date.now(), name, sql, user_id]], 'insert_datasource.sql');
-            res.json(r);
         }
+        res.send();
     } catch (error) {
         console.log(error);
         res.send({'result':'Something wrong'});
